@@ -1,42 +1,28 @@
-import pnLogo from "./assets/pn-logo.png";
+import Sc
+import Header from "./components/Header";
+import * as data from "./data.js";
 
 function App() {
   return (
     <>
-      <header id="header">
-        <img src={pnLogo} alt="PN Logo" />
-        <h1>Students results for (fake batch name))</h1>
-      </header>
+
+      <Header id="header" batchName={"fake batch name"} />
+      
+
+
 
       <main className="scores-container">
-        <div class="scores">
-          <h1>Fake Course</h1>
-
-          <table>
-            <thead>
-              <tr>
-                <th>First name</th>
-                <th>Last name</th>
-                <th>Score</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>First name 1 </td>
-                <td>Last name 1 </td>
-                <td>55</td>
-              </tr>
-              <tr>
-                <td>First name 2 </td>
-                <td>Last name 2 </td>
-                <td>45</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
+        <Scores course_name={"Java"} list_results={data.JAVA_RESULTS} />
+        <Scores course_name={"English"} list_results={data.ENGLISH_RESULTS} />
+        <Scores course_name={"Python"} list_results={data.PYTHON_RESULTS} />
+        <Scores course_name={"HTML"} list_results={data.HTML_RESULTS} />
+        
       </main>
-    </>
+     
+      
+      </>
   );
 }
 
 export default App;
+
