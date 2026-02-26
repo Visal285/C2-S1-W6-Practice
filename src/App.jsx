@@ -1,7 +1,6 @@
-import Sc
 import Header from "./components/Header";
 import * as data from "./data.js";
-
+import Scores from "./components/Scores";
 function App() {
   return (
     <>
